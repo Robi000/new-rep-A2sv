@@ -5,11 +5,6 @@ class Solution(object):
         :type t: str
         :rtype: str
         """
-        s = ''.join(sorted(s))
-        t = ''.join(sorted(t))
-        if len(s) == 0:
-            return t
-        for i in range(len(s)):
-            if s[i] != t[i]:
-                return t[i]
-        return t[-1]
+        for x in t:
+            if s.count(x) < t.count(x):
+                return x
