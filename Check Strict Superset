@@ -1,0 +1,18 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+nums = set(map(int , input().split(" ")))
+numberOfSet = int(input())
+sets = [list(map(int , input().split(" "))) for a in range(numberOfSet)]
+
+# print(nums , sets)
+check = []
+for x in sets:
+    y = set(x)
+    # print(y)
+    # print(y-nums ,set() != nums - y)
+    check.append(set() == y - nums )
+    check.append(set() != nums - y )
+# print(check)
+# print("ere hello")
+print(all(check))
+    
