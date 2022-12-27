@@ -1,0 +1,22 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+i , j = list(map(int , input().split()))
+
+dict = {}
+
+A = [input() for a in range(i)]
+for a in range(len(A)):
+    if A[a] in dict:
+        dict[A[a]].append(str(a+1))
+    else:
+        dict[A[a]] = [str(a+1)]
+B = [input() for a in range(j)]
+
+for b in B:
+    if b not in dict:
+        print(-1)
+    else:
+        print(" ".join(dict[b]))
+
+
+    
