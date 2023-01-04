@@ -4,7 +4,7 @@ class Solution:
         for domain in cpdomains:
             domain = domain.split()
             pairs = domain[1].split(".")
-            print(domain , pairs)
+            # print(domain , pairs)
             upto = ""
             for i in range(len(pairs)-1 , -1 , -1):
                 if i == len(pairs)-1:
