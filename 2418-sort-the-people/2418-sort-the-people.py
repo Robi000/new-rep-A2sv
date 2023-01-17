@@ -10,7 +10,7 @@ class Solution:
             for j in range( i +1 ,len(heights)):
                 if heights[j] > heights[mixx]:
                     mixx = j
-            if 1:
+            if mixx != i:
                     heights[i] , heights[mixx] = heights[mixx] , heights[i]
                     names[i] , names[mixx] = names[mixx] , names[i]
         return names
